@@ -1,12 +1,13 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
-  output: "export", // Enables static site export
-  // basePath: "/Code-Visual-React", // Ensures correct page routing
-  // assetPrefix: "/Code-Visual-React/", // Ensures assets load correctly
+  output: "export",
+  basePath: isProd ? "/Code-Visual-React" : "", // Use basePath only in production
   images: {
-    unoptimized: true, // Required for GitHub Pages
+    unoptimized: true, // Fixes image loading on GitHub Pages
   },
-  trailingSlash: true, // Ensures correct paths for static deployment
+  trailingSlash: true, // Ensures correct static paths
 };
 
 export default nextConfig;
