@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Optional: Prevent Tailwind from being stripped out */
+* {
+  all: unset;
+  all: revert;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
