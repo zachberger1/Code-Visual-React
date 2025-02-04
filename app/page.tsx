@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import Image from "next/image";
+// import Image from "next/image";
 import { FaLaptopCode, FaMobileAlt, FaServer } from "react-icons/fa";
 import "tailwindcss/tailwind.css";
 import Header from "./header";
